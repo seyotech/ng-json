@@ -43,12 +43,13 @@ export class RenderComponent implements OnInit {
   ngOnInit(): void {
     const componentClass = this.componentMap[this.element.type];
     if (componentClass) {
-      console.log('Rendering component:', this.element.type);
       const componentRef =
         this.viewContainerRef.createComponent<ComponentType>(componentClass);
       const instance = componentRef.instance;
       instance.element = this.element;
       instance.style = this.element.style;
+
+      console.log('Rendering component:', this.element.type, instance, componentRef);
       if (this.element.content) {
         instance.children = this.element.content;
       }

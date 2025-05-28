@@ -5,7 +5,7 @@ import { StyleService } from '../utils/style.service';
 @Component({
   selector: 'app-input',
   standalone: true,
-  template: `<input [class]="selector" [type]="field.type" [name]="field.name">`,
+  template: `<input [class]="selector" [type]="field.placeholder" [placeholder]="field.attr.placeholder" [name]="field.name">`,
   styles: []
 })
 export class InputComponent implements OnInit {

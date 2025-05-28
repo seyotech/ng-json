@@ -21,5 +21,7 @@ export class ButtonComponent implements OnInit {
     if (this.style) {
       this.styleService.exportStyle(this.selector, this.style);
     }
+    console.log(this.children,'test');
+    
   }
 }

@@ -1,5 +1,5 @@
 // src/app/subscription/subscription.component.ts
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormComponent } from '../form/form.component';
 import { InputComponent } from '../input/input.component';
 import { LabelComponent } from '../label/label.component';
@@ -16,11 +16,19 @@ import { CommonModule } from '@angular/common';
         <app-label>{{field.label}}</app-label>
         <app-input [field]="field" [style]="form.fields.style"></app-input>
       </ng-container>
-      <app-button [style]="form.submitButton.style">{{form.submitButton.content}}</app-button>
+      <app-button [style]="form.submitButton.style" [children]="form.submitButton.content"></app-button>
     </app-form>
   `,
   styles: []
 })
-export class SubscriptionComponent {
+export class SubscriptionComponent implements OnInit {
   @Input() form: any;
+  constructor() {
+    
+  }
+  ngOnInit(): void {
+    console.log(this.form, 'test');
+    
+  }
+  
 }
