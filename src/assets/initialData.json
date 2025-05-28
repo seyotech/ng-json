@@ -1,119 +1,240 @@
 [
   {
-    "name": "Title",
-    "level": "h1",
-    "type": "heading",
-    "content": "<p>This is all about how we use dorik element for creating our site.</p>",
-    "style": {
-      "color": "#3a30ba",
-      "marginTop": "20px",
-      "fontSize": "32px",
-      "textAlign": "justify",
-      "lineHeight": 1.2
-    }
-  },
-  {
-    "name": "Title",
-    "level": "h2",
-    "type": "heading",
-    "content": "<p>We have used h1 as our fisrt title and h2 for this title</p>",
-    "style": {
-      "color": "#493fd7",
-      "marginLeft": "20px",
-      "fontSize": "28px",
-      "textAlign": "left",
-      "textTransform": "uppercase"
-    }
-  },
-  {
-    "name": "Title",
-    "level": "h3",
-    "type": "heading",
-    "content": "<p>We can use h1 to h6</p>",
-    "style": {
-      "color": "#3a30ba",
-      "fontSize": "24px",
-      "padding": "15px",
-      "textAlign": "left",
-      "textTransform": "capitalize"
-    }
-  },
-  {
-      "name": "Text",
-    "type": "text",
-    "content": "<p>We can use text element to use as a paragraph.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>",
-    "style": {
-      "text-Align": "justify",
-      "fontSize": "14px",
-      "color": "#fff",
-      "marginLeft": "20px",
-      "backgroundColor": "black"
-    }
-  },
-  {
-    "type": "image",
-    "name": "Image",
-    "style": {
-      "objectFit": "cover",
-      "width": "100%",
-      "height": "400px",
-      "marginTop": "40px",
-      "padding": "10px 20px"
-    },
-    "attr": {
-      "src": "https://images.unsplash.com/photo-1517926112623-f32a800790d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
-      "alt": "My fav image"
-    }
-  },
-  {
-    "type": "subscription",
-    "name": "Subscription Form",
-    "form": {
-      "fields": {
-        "style": {
-          "color": "#171A21",
-          "fontSize": "14px",
-          "border": "2px solid #26C281",
-          "height": "40px",
-          "borderRadius": "5px 5px 5px 5px",
-          "backgroundColor": "#FFFFFF"
-        },
-        "items": [
-          {
-            "id": "1",
-            "name": "email",
-            "label": "Email",
-            "attr": {
-              "placeholder": "Email Address"
-            }
-          },
-          {
-            "id": "g9itsign",
-            "name": "firstName",
-            "label": "First Name",
-            "attr": {
-              "placeholder": "First Name"
-            }
-          }
-        ]
-      },
-      "submitButton": {
-        "content": "Subscribe",
-        "style": {
-          "color": "#FFFFFF",
-          "backgroundColor": "#26C281",
-          "height": "46px",
-          "fontSize": "18px",
-          "borderRadius": "5px 5px 5px 5px"
-        }
-      },
+      "name": "Section",
+      "id": "mo12g6if",
+      "type": "section",
       "style": {
-        "display": "flex",
-        "flexDirection": "column",
-        "justifyContent": "center",
-        "gap": "8px",
-        "maxWidth": "1200px"
-      }
-    }
+          "paddingTop": "80px",
+          "paddingBottom": "80px",
+          "backgroundColor": "#FFFFFF"
+      },
+      "content": [
+          {
+              "name": "Row",
+              "type": "row",
+              "id": "e1lsgbs7",
+              "style": {},
+              "content": [
+                  {
+                      "name": "Column",
+                      "id": "u2xjkiup",
+                      "type": "column",
+                      "style": {
+                          "paddingTop": "15px",
+                          "paddingBottom": "15px"
+                      },
+                      "content": [
+                          {
+                              "name": "Title",
+                              "titleType": "h1",
+                              "type": "heading",
+                              "content": "<p>Make Digital Product With Our Agency</p>",
+                              "id": "ojxlqexn",
+                              "style": {
+                                  "fontSize": "67px",
+                                  "lineHeight": "77px",
+                                  "fontWeight": "700",
+                                  "textAlign": "center",
+                                  "marginBottom": "0"
+                              }
+                          },
+                          {
+                              "type": "image",
+                              "name": "Image",
+                              "style": {
+                                  "objectFit": "cover",
+                                  "width": "100%",
+                                  "height": "400px",
+                                  "marginTop": "40px",
+                                  "padding": "10px 20px"
+                              },
+                              "id": "2rs5aedj",
+                              "attr": {
+                                  "src": "https://images.unsplash.com/photo-1517926112623-f32a800790d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                              }
+                          },
+                          {
+                              "type": "text",
+                              "name": "Text",
+                              "content": "<p>We are a creative studio specializing in UI/UX design, development</p<p>and strategy.<strong> Let’s create something together</strong>.</p>",
+                              "id": "dk1uufdm",
+                              "style": {
+                                  "textAlign": "center",
+                                  "fontWeight": "400",
+                                  "marginTop": "16px",
+                                  "color": "#3F3F46"
+                              }
+                          },
+                          {
+                              "type": "subscription",
+                              "name": "Subscription Form",
+                              "id": "ku0cu1rn",
+                              "form": {
+                                  "fields": {
+                                      "style": {
+                                          "color": "#171A21",
+                                          "fontSize": "14px",
+                                          "border": "2px solid #26C281",
+                                          "height": "40px",
+                                          "borderRadius": "5px 5px 5px 5px",
+                                          "backgroundColor": "#FFFFFF",
+                                          "marginTop": "5px"
+                                      },
+                                      "items": [
+                                          {
+                                              "id": "1",
+                                              "name": "email",
+                                              "label": "Email",
+                                              "attr": {
+                                                  "placeholder": "Email Address"
+                                              }
+                                          },
+                                          {
+                                              "id": "g9itsign",
+                                              "name": "firstName",
+                                              "label": "First Name",
+                                              "attr": {
+                                                  "placeholder": "First Name"
+                                              }
+                                          }
+                                      ]
+                                  },
+                                  "submitButton": {
+                                      "content": "Subscribe",
+                                      "type": "submit",
+                                      "id": "9kdhfaiwe",
+                                      "style": {
+                                          "color": "#FFFFFF",
+                                          "border": "none",
+                                          "backgroundColor": "#26C281",
+                                          "height": "46px",
+                                          "fontSize": "18px",
+                                          "borderRadius": "5px 5px 5px 5px"
+                                      }
+                                  },
+                                  "style": {
+                                      "display": "flex",
+                                      "flexDirection": "row",
+                                      "justifyContent": "center",
+                                      "alignItems": "end",
+                                      "gap": "8px",
+                                      "marginTop": "50px"
+                                  }
+                              }
+                          }
+                      ]
+                  }
+              ]
+          }
+      ]
+  },
+  {
+      "name": "Section",
+      "id": "9smvc76n",
+      "type": "section",
+      "style": {
+          "paddingTop": "15px",
+          "paddingBottom": "15px",
+          "backgroundColor": "#FEEEEE"
+      },
+      "content": [
+          {
+              "name": "Row",
+              "type": "row",
+              "id": "lapi203n",
+              "style": {
+                  "padding": "10px 20px"
+              },
+              "content": [
+                  {
+                      "name": "Column",
+                      "style": {},
+                      "id": "q402ievp",
+                      "type": "column",
+                      "content": [
+                          {
+                              "name": "Title",
+                              "titleType": "h4",
+                              "type": "heading",
+                              "content": "<p>Trusted By 20,000+ Customers</p>",
+                              "id": "3mnpgqzl",
+                              "style": {
+                                  "fontWeight": "700",
+                                  "textAlign": "center",
+                                  "fontSize": "28px"
+                              }
+                          },
+                          {
+                              "name": "Title",
+                              "titleType": "h3",
+                              "type": "heading",
+                              "content": "<p>The Fields of UI/UX</p><p>And Art Direction</p>",
+
+                              "id": "snyf7lvl",
+                              "style": {
+                                  "fontWeight": "700",
+                                  "fontSize": "38px",
+                                  "lineHeight": "48px",
+                                  "color": "#18181B"
+                              }
+                          },
+                          {
+                              "type": "text",
+                              "name": "Text",
+                              "content": "<p>Our clients describe us as a product team which creates amazing UI/UX experiences, by crafting top-notch user experience. But structure were from the funny the century rather, initial all the made, have spare to negatives</p>",
+                              "id": "cvhvojk9",
+                              "style": {
+                                  "color": "#3F3F46",
+                                  "fontWeight": "400",
+                                  "lineHeight": "26px"
+                              }
+                          },
+                          {
+                              "type": "button",
+                              "name": "Button",
+                              "content": "View Showcase",
+                              "style": {
+                                  "padding": "14px 18px",
+                                  "justifyContent": "center",
+                                  "borderRadius": "6px 6px 6px 6px",
+                                  "border": "2px solid #EA580C",
+                                  "backgroundColor": "#FFFFFF",
+                                  "fontSize": "16px",
+                                  "color": "#EA580C",
+                                  "lineHeight": "26px",
+                                  "flexDirection": "row-reverse",
+                                  "fontWeight": "500"
+                              },
+                              "id": "udakpycn"
+                          }
+                      ]
+                  },
+                  {
+                      "name": "Column",
+                      "style": {
+                          "textAlign": "center",
+                          "backgroundColor": "#ddd",
+                          "marginTop": "30px"
+                      },
+                      "id": "q402isvp",
+                      "type": "column",
+                      "content": [
+                          {
+                              "type": "text",
+                              "name": "Text",
+                              "content": "<p>hello, this is another text</p>",
+                              "id": "cvssojk9",
+                              "style": {
+                                  "padding": "20px",
+                                  "fontSize": "24px",
+                                  "color": "red",
+                                  "fontWeight": "400"
+                              }
+                          }
+                      ]
+                  }
+              ]
+          }
+      ]
   }
 ]
