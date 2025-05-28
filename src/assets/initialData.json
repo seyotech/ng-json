@@ -1,0 +1,40 @@
+[
+  {
+    "type": "heading",
+    "level": "h1",
+    "content": "Welcome to My App",
+    "style": { "color": "blue", "fontSize": "24px" }
+  },
+  {
+    "type": "text",
+    "content": "This is a sample paragraph.",
+    "style": { "color": "black", "fontSize": "16px" }
+  },
+  {
+    "type": "image",
+    "attr": { "src": "https://example.com/image.jpg", "alt": "Sample Image" },
+    "style": { "width": "100px", "height": "100px" }
+  },
+  {
+    "type": "button",
+    "content": "Click Me",
+    "style": { "backgroundColor": "green", "color": "white" }
+  },
+  {
+    "type": "subscription",
+    "form": {
+      "style": { "padding": "20px" },
+      "fields": {
+        "items": [
+          { "label": "Email", "type": "email", "name": "email" },
+          { "label": "Name", "type": "text", "name": "name" }
+        ],
+        "style": { "marginBottom": "10px" }
+      },
+      "submitButton": {
+        "content": "Subscribe",
+        "style": { "backgroundColor": "blue", "color": "white" }
+      }
+    }
+  }
+]
