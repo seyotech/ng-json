@@ -1,4 +1,3 @@
-// src/app/form/form.component.ts
 import { Component, Input } from '@angular/core';
 import { StyleService } from '../utils/style.service';
 import { CommonModule } from '@angular/common';
@@ -7,7 +6,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-form',
   standalone: true,
   imports: [CommonModule],
-  template: `<form [class]="selector"><ng-content></ng-content></form>`,
+  template: `<form [ngClass]="selector"><ng-content></ng-content></form>`,
   styles: []
 })
 export class FormComponent {

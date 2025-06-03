@@ -4,29 +4,32 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class StyleService {
-  private stylesElement: HTMLStyleElement;
-
-  constructor() {
-    this.stylesElement = document.createElement('style');
-    this.stylesElement.id = 'styles-import';
-    document.head.appendChild(this.stylesElement);
-  }
-
-  camelCaseToKebabCase(camelCaseObj: any): string {
-    return Object.keys(camelCaseObj)
-      .map(key => {
-        const kebabCase = key.replace(/[A-Z]/g, match => `-${match.toLowerCase()}`);
-        return `${kebabCase}:${camelCaseObj[key]};`;
-      })
-      .join('\n');
-  }
+  private stylesMap: Map<string, string> = new Map();
 
   generateUniqueId(): string {
-    return `prefix-${Math.random().toString(36).substring(2, 8)}`;
+    return 'id-' + Math.random().toString(36).substr(2, 9);
   }
 
-  exportStyle(selector: string, style: any): void {
-    const generatedStyle = this.camelCaseToKebabCase(style);
-    this.stylesElement.appendChild(document.createTextNode(`.${selector} {${generatedStyle}}`));
+  exportStyle(selector: string, styles: any): void {
+    let styleString = '';
+    for (const [key, value] of Object.entries(styles)) {
+      const kebabKey = key.replace(/([A-Z])/g, '-$1').toLowerCase();
+      styleString += `${kebabKey}: ${value}; `;
+    }
+    this.stylesMap.set(selector, styleString);
+
+    // Create or update style element in the document head
+    let styleElement = document.getElementById('dynamic-styles');
+    if (!styleElement) {
+      styleElement = document.createElement('style');
+      styleElement.id = 'dynamic-styles';
+      document.head.appendChild(styleElement);
+    }
+
+    // Update styles
+    const allStyles = Array.from(this.stylesMap.entries())
+      .map(([sel, styles]) => `.${sel} { ${styles} }`)
+      .join('\n');
+    styleElement.textContent = allStyles;
   }
 }

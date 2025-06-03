@@ -1,11 +1,12 @@
-// src/app/input/input.component.ts
 import { Component, Input, OnInit } from '@angular/core';
 import { StyleService } from '../utils/style.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-input',
   standalone: true,
-  template: `<input [class]="selector" [type]="field.placeholder" [placeholder]="field.attr.placeholder" [name]="field.name">`,
+  imports: [CommonModule],
+  template: `<input [ngClass]="selector" [type]="field.name === 'email' ? 'email' : 'text'" [placeholder]="field.attr.placeholder">`,
   styles: []
 })
 export class InputComponent implements OnInit {

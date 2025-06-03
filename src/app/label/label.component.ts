@@ -1,10 +1,13 @@
-// src/app/label/label.component.ts
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-label',
   standalone: true,
-  template: `<label><ng-content></ng-content></label>`,
+  imports: [CommonModule],
+  template: `<label>{{children}}</label>`,
   styles: []
 })
-export class LabelComponent {}
+export class LabelComponent {
+  @Input() children: any;
+}

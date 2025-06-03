@@ -1,15 +1,17 @@
-// src/app/button/button.component.ts
 import { Component, Input, OnInit } from '@angular/core';
 import { StyleService } from '../utils/style.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-button',
   standalone: true,
-  template: `<button [class]="selector">{{children}}</button>`,
-  styles: []
+  template: `<button [ngClass]="selector">{{children}}</button>`,
+  styles: [],
+  imports:[CommonModule]
 })
 export class ButtonComponent implements OnInit {
   @Input() children: any;
+  
   @Input() style: any;
   selector: string;
 
@@ -18,10 +20,9 @@ export class ButtonComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log({t: this.children});
     if (this.style) {
       this.styleService.exportStyle(this.selector, this.style);
     }
-    console.log(this.children,'test');
-    
   }
 }

@@ -1,12 +1,13 @@
-// src/app/image/image.component.ts
 import { Component, Input, OnInit } from '@angular/core';
 import { StyleService } from '../utils/style.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-image',
   standalone: true,
-  template: `<img [class]="selector" [src]="attr.src" [alt]="attr.alt">`,
-  styles: []
+  template: `<img [ngClass]="selector" [src]="attr.src" [alt]="attr.alt || element.name || 'Image'">`,
+  styles: [],
+  imports:[CommonModule]
 })
 export class ImageComponent implements OnInit {
   @Input() attr: any;

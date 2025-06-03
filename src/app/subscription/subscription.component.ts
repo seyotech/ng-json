@@ -27,7 +27,7 @@ export class SubscriptionComponent implements OnInit {
     
   }
   ngOnInit(): void {
-    console.log(this.form, 'test');
+    console.log(this.form, this.form.submitButton.content, 'test');
     
   }
   

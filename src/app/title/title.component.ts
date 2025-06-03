@@ -1,4 +1,3 @@
-// src/app/title/title.component.ts
 import { Component, Input, OnInit } from '@angular/core';
 import { StyleService } from '../utils/style.service';
 import { CommonModule } from '@angular/common';
@@ -8,21 +7,21 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <ng-container *ngIf="element?.level">
-      <ng-container [ngSwitch]="element.level">
-        <h1 *ngSwitchCase="'h1'" [class]="selector" [innerHTML]="children"></h1>
-        <h2 *ngSwitchCase="'h2'" [class]="selector" [innerHTML]="children"></h2>
-        <h3 *ngSwitchCase="'h3'" [class]="selector" [innerHTML]="children"></h3>
-        <h1 *ngSwitchDefault [class]="selector" [innerHTML]="children"></h1>
+    <ng-container *ngIf="element?.titleType">
+      <ng-container [ngSwitch]="element.titleType">
+        <h1 *ngSwitchCase="'h1'" [ngClass]="selector" [innerHTML]="element.content"></h1>
+        <h2 *ngSwitchCase="'h2'" [ngClass]="selector" [innerHTML]="element.content"></h2>
+        <h3 *ngSwitchCase="'h3'" [ngClass]="selector" [innerHTML]="element.content"></h3>
+        <h4 *ngSwitchCase="'h4'" [ngClass]="selector" [innerHTML]="element.content"></h4>
+        <h1 *ngSwitchDefault [ngClass]="selector" [innerHTML]="element.content"></h1>
       </ng-container>
     </ng-container>
   `,
   styles: []
 })
 export class TitleComponent implements OnInit {
-  @Input() children: any;
-  @Input() style: any;
   @Input() element: any;
+  @Input() style: any;
   selector: string;
 
   constructor(private styleService: StyleService) {
